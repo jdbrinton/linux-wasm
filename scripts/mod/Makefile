@@ -4,6 +4,8 @@ CFLAGS_REMOVE_empty.o += $(CC_FLAGS_LTO)
 hostprogs-always-y	+= modpost mk_elfconfig
 always-y		+= empty.o
 
+PHONY += dummy_elfconfig
+
 modpost-objs	:= modpost.o file2alias.o sumversion.o symsearch.o
 
 devicetable-offsets-file := devicetable-offsets.h
@@ -21,7 +23,11 @@ $(obj)/file2alias.o: $(obj)/$(devicetable-offsets-file)
 quiet_cmd_elfconfig = MKELF   $@
       cmd_elfconfig = $(obj)/mk_elfconfig < $< > $@
 
-$(obj)/elfconfig.h: $(obj)/empty.o $(obj)/mk_elfconfig FORCE
-	$(call if_changed,elfconfig)
+# $(obj)/elfconfig.h: $(obj)/empty.o $(obj)/mk_elfconfig FORCE
+# 	$(call if_changed,elfconfig)
+
+# For WebAssembly, we use a dummy elfconfig.h
+scripts/mod/elfconfig.h: dummy_elfconfig
+	@touch $@
 
 targets += elfconfig.h

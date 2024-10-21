@@ -1,0 +1,8 @@
+#ifndef _ASM_WASM32_CACHE_H
+#define _ASM_WASM32_CACHE_H
+
+#define L1_CACHE_SHIFT 6
+#define L1_CACHE_BYTES (1 << L1_CACHE_SHIFT)
+#define SMP_CACHE_BYTES L1_CACHE_BYTES
+
+#endif /* _ASM_WASM32_CACHE_H */

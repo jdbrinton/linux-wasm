@@ -1,0 +1,3 @@
+# generic-y += byteorder.h
+# generic-y += ptrace.h
+# generic-y += sigcontext.h

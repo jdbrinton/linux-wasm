@@ -1,0 +1,4 @@
+#ifndef _UAPI_ASM_WASM32_PTRACE_H
+#define _UAPI_ASM_WASM32_PTRACE_H
+
+#endif /* _UAPI_ASM_WASM32_PTRACE_H */

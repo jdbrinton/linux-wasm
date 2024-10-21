@@ -1,0 +1,78 @@
+# Core Kernel Options
+# CONFIG_MMU=y                   # Keep MMU enabled with a dummy implementation
+# CONFIG_SYSFS=y                 # Enable sysfs for kernel object model access
+# CONFIG_PROC_FS=y               # Enable /proc filesystem for process information
+# CONFIG_TMPFS=y                 # Enable tmpfs for RAM-based filesystems
+# CONFIG_DEVTMPFS=y              # Enable dynamic device management under /dev
+
+# Console Options
+CONFIG_TTY=y
+CONFIG_SERIAL_CORE=y
+CONFIG_VT=y
+CONFIG_UNIX98_PTYS=y
+
+# Networking Options
+# CONFIG_NET=y                   # Enable basic networking stack
+# CONFIG_INET=y                  # Enable TCP/IP networking
+# CONFIG_PACKET=y                # Enable packet socket for low-level network access
+# CONFIG_UNIX=y                  # Enable Unix domain sockets for IPC
+# CONFIG_NETFILTER=y             # Enable netfilter for packet filtering
+# CONFIG_NF_CONNTRACK=y          # Enable connection tracking for network traffic
+
+# Virtio Support for Emulated Devices (if needed)
+# CONFIG_VIRTIO=y                # Enable Virtio support for virtual devices
+# CONFIG_VIRTIO_MMIO=y           # Use MMIO for Virtio devices
+
+# Debugging and Logging
+CONFIG_PRINTK=y                # Enable kernel printing (log messages)
+# CONFIG_KALLSYMS=y              # Enable kernel symbol table for debugging
+
+# Filesystem Support
+# CONFIG_EXT4_FS=y               # Enable support for EXT4 filesystem
+# CONFIG_VFAT_FS=y               # Enable VFAT filesystem support (useful for emulated or simple file systems)
+# CONFIG_TMPFS=y                 # Enable tmpfs for temporary in-memory filesystems
+# CONFIG_OVERLAY_FS=y            # Enable overlay filesystem support
+# CONFIG_NFS_FS=y                # Enable Network File System (NFS) client support
+# CONFIG_SQUASHFS=y              # Enable read-only SquashFS filesystem
+# CONFIG_F2FS_FS=y               # Enable Flash-Friendly Filesystem (F2FS)
+# CONFIG_ISO9660_FS=y            # Enable ISO9660 CD-ROM filesystem support
+# CONFIG_BTRFS_FS=y              # Enable BTRFS filesystem support
+# CONFIG_CIFS=y                  # Enable Common Internet File System (CIFS) support
+
+# Miscellaneous File Systems
+# CONFIG_ROMFS_FS=y              # Minimal read-only filesystem support (ROMFS)
+# CONFIG_UDF_FS=y                # Enable Universal Disk Format (UDF) filesystem
+# CONFIG_HFS_FS=y                # Enable HFS filesystem support
+# CONFIG_JFFS2_FS=y              # Enable Journaling Flash File System v2 (JFFS2)
+# CONFIG_NTFS_FS=y               # Enable NTFS filesystem support (read-only)
+
+# Additional "Freebies" that don't need actual hardware
+# CONFIG_DUMMY=y                 # Enable dummy network interface driver
+# CONFIG_LOOPBACK_FS=y           # Enable loopback filesystem driver
+# CONFIG_BLK_DEV_LOOP=y          # Enable loopback device support for mounting files as block devices
+# CONFIG_RAMFS=y                 # Enable RAM-based filesystem (RAMFS)
+# CONFIG_PSTORE=y                # Enable persistent storage for crash logs
+# CONFIG_ZRAM=y                  # Enable compressed RAM block device (ZRAM)
+# CONFIG_CRYPTO=y                # Enable general cryptographic API
+# CONFIG_CRYPTO_AES=y            # Enable AES encryption algorithm (software-based)
+# CONFIG_CRYPTO_HASH=y           # Enable hashing algorithms (SHA, MD5, etc.)
+# CONFIG_CRYPTO_DEFLATE=y        # Enable DEFLATE compression algorithm (software-based)
+
+# IPC Mechanisms
+# CONFIG_SYSVIPC=y               # Enable SysV IPC (for message queues, semaphores, shared memory)
+# CONFIG_POSIX_MQUEUE=y          # Enable POSIX message queues for IPC
+# CONFIG_SHMEM=y                 # Enable shared memory virtual filesystem
+
+# Security (optional, based on needs)
+# CONFIG_SECURITYFS=y            # Enable security filesystem
+# CONFIG_KEYS=y                  # Enable kernel key management
+# CONFIG_SECURITY=y              # Enable kernel security framework
+# CONFIG_CRYPTO_USER_API=y       # Enable user-space crypto API
+
+# Miscellaneous Options
+# CONFIG_BLK_DEV=y               # Enable block device support
+
+# Device Support (emulation-friendly)
+# CONFIG_INPUT_MOUSEDEV=y        # Enable basic mouse input device (can be emulated by JS)
+# CONFIG_INPUT_KEYBOARD=y        # Enable basic keyboard input device
+

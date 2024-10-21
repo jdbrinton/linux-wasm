@@ -384,6 +384,12 @@ ARCH		?= $(SUBARCH)
 UTS_MACHINE 	:= $(ARCH)
 SRCARCH 	:= $(ARCH)
 
+# Additional ARCH settings for wasm32
+ifeq ($(ARCH),wasm32)
+        KBUILD_DEFCONFIG := wasm32_defconfig
+        SRCARCH := wasm32
+endif
+
 # Additional ARCH settings for x86
 ifeq ($(ARCH),i386)
         SRCARCH := x86
@@ -1199,7 +1205,9 @@ archprepare: outputmakefile archheaders archscripts scripts include/config/kerne
 	include/generated/compile.h include/generated/autoconf.h remove-stale-files
 
 prepare0: archprepare
+ifeq ($(CONFIG_MODULES),y)
 	$(Q)$(MAKE) $(build)=scripts/mod
+endif
 	$(Q)$(MAKE) $(build)=. prepare
 
 # All the preparing..

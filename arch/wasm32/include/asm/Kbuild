@@ -1,0 +1,15 @@
+headers-y += byteorder.h cache.h cmpxchg.h
+headers-y += irqflags.h mmu.h
+headers-y += page.h param.h preempt.h processor.h
+headers-y += ptrace.h signal.h spinlock.h string.h
+headers-y += thread_info.h uaccess.h vmalloc.h
+headers-y += pgtable.h pgtable_types.h
+headers-y += export.h
+headers-y += extable.h
+headers-y += sections.h
+headers-y += posix_types.h
+headers-y += module.h
+headers-y += section_def.h
+headers-y += elf.h
+headers-y += compiler.h
+headers-y += memory.h

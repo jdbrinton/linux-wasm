@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: GPL-2.0
+# Architecture-specific debug options for WASM32
+
+menu "WASM32 Debugging"
+
+config DEBUG_WASM32
+    bool "Enable WASM32 Debugging"
+    help
+      Enable debugging features specific to the WASM32 architecture.
+
+endmenu

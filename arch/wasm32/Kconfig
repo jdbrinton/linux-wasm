@@ -1,0 +1,45 @@
+menu "WASM32 Architecture"
+
+config WASM32
+    def_bool y
+    bool "WASM32 support"
+    help
+      Enable support for the WASM32 architecture.
+    select HAVE_SYSCALL_WRAPPER
+    select HAVE_ARCH_XCHG
+    select HAVE_ARCH_CMPXCHG
+    select GENERIC_ATOMIC64
+    select GENERIC_ATOMIC_LONG
+    select GENERIC_LIB_ASHLDI3
+    select GENERIC_LIB_ASHRDI3
+    select GENERIC_LIB_LSHRDI3
+    select NO_MODULE_SUPPORT
+    select MODULES
+
+config MMU
+    def_bool n
+
+config STACK_ALIGN
+    int
+    default 16
+
+config ARCH_HAS_ATOMIC
+    def_bool y
+
+config HAVE_ARCH_IRQFLAGS
+    def_bool y
+
+config KALLSYMS
+    def_bool n
+
+config NO_MODULE_SUPPORT
+    def_bool y
+
+config MODULES
+    bool
+
+config HZ
+    int
+    default 100
+
+endmenu
